@@ -18,5 +18,5 @@ I am new to this (my computer science Master's is 20 years old) so any seasonend
 Take care!
 
 kamiel
-http:creativechoice.org
+http://creativechoice.org
 
