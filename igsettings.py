@@ -30,7 +30,7 @@ TEXT_COLOR = (240,240,240)
 TINT_COLOR = (0, 0, 0)  # Black
 TRANSPARENCY = .75  # Degree of transparency, 0-100%
 OPACITY = int(255 * TRANSPARENCY)
-credits = "©2020 poetry_connects & creativechoice.org ~ share the love for poetry"
+credits = "© 2020 poetry_connects & creativechoice.org | share the love for poetry"
 
 
 #selection of poetry related hashtags
