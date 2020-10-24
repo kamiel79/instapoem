@@ -1,4 +1,4 @@
-from env import *
+from env.env import *
 from PIL import Image, ImageDraw, ImageFont
 import calendar
 import random
