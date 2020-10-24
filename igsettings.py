@@ -11,12 +11,12 @@ import shutil
 WEBDRIVER_PATH = r"C:\DRIVERS\chromedriver.exe"	#Set your webdriver path
 ARCHIVE_PATH = "archive/"
 IMAGE_PATH = "img/"
+POEMS_PATH = 'poems/'
 FONTS_PATH = "fonts/"
 main_url = "https://www.instagram.com"
 
 #Settings for text rendering
 DEFAULT_BKG_DIR = 'img/default/'
-DEFAULT_POEMS_DIR = 'poems/'
 THE_FLICKR_IMAGE = 'img/bkg.jpg'
 FONT_SIZE = 32
 TITLE_SIZE = FONT_SIZE * 2
@@ -43,16 +43,16 @@ def get_hashtags(number):
 		hashtags+=" #" + possible_hashtags[random.randint(0,num_tags)-1] 
 	return hashtags
 	
-def archive(filename):
+def archive(filename, path):
 	print("Archiving: " + filename)
 	if (os.path.isfile(ARCHIVE_PATH + filename)):
 		print ("File already archived")
 	else:
-		newpath = shutil.move (filename, ARCHIVE_PATH)
-		print(newpath)
+		newpath = shutil.move (path + filename, ARCHIVE_PATH)
 	
 def get_image():
 	#if image in args, load it
+	imagename = ""
 	if (len(sys.argv) == 2):
 		imagename = sys.argv[1]
 		imagename = ABSOLUTE_PATH + imagename

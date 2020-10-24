@@ -1,3 +1,5 @@
+from env.env import *
+
 # First, you should install flickrapi
 # pip install flickrapi
 
@@ -11,7 +13,7 @@ def get_flickr_img (keyword, filename):
 	# see https://joequery.me/code/flickr-api-image-search-python/
 
 	# Flickr api access key 
-	flickr=flickrapi.FlickrAPI('c6a2c45591d4973ff525042472446ca2', '202ffe6f387ce29b', cache=True)
+	flickr=flickrapi.FlickrAPI(FLICKRKEY, FLICKRSECRET, cache=True)
 
 	insta_size = (612, 612)
 	if (keyword == ""):

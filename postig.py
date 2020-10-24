@@ -100,7 +100,7 @@ caption_field.send_keys(caption)
 share_btn = driver.find_element_by_xpath("//button[contains(text(),'Share')]").click()
 
 # Archive old file
-archive(imagename)
+archive(imagename, IMAGE_PATH)
 
 sleep(25)
 

@@ -15,13 +15,13 @@ class Poem:
 		#if poem and image in args, load them, else get the latest poem and a random image
 		if (len(sys.argv) == 3):
 			poem_file = sys.argv[1]
-			file = open (DEFAULT_POEMS_DIR + poem_file, "r")
+			file = open (POEMS_PATH + poem_file, "r")
 			title = file.readline()
 			imagename = sys.argv[2]
 			print("Using image " + imagename + " for poem " + poem_file)
 			img = Image.open(IMAGE_PATH + imagename)
 		else:
-			list_of_files = glob.glob(DEFAULT_POEMS_DIR + '/*.txt')
+			list_of_files = glob.glob(POEMS_PATH + '/*.txt')
 			poem_file = max(list_of_files, key=os.path.getctime)
 			file = open (poem_file, "r")
 			title = file.readline()	#title is first line
@@ -132,7 +132,7 @@ class Poem:
 
 		#move poem to done
 		file.close()
-		archive(DEFAULT_POEMS_DIR + poem_file)
+		archive(poem_file, "")
 
 def main():
 	my_poem = Poem()
