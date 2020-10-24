@@ -62,6 +62,9 @@ def get_image():
 		list_of_files = glob.glob(IMAGE_PATH + "*.png")
 		if (list_of_files):
 			imagename = max(list_of_files, key=os.path.getctime)
+		else:
+			sys.exit("Could not find image file") 
+		imagename = os.path.abspath(imagename)
 
 	return imagename
 	
