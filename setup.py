@@ -8,17 +8,6 @@ setup(name='instapoem',
       author_email='kamiel@creativechoice.org',
       license='MIT',
       packages=['instapoem'],
-      install_requires=[
-          'time',
-		  'selenium',
-		  'autoit',
-		  'PIL',
-		  'calendar',
-		  'datetime',
-		  'glob',
-		  'os',
-		  'sys',
-		  'shutil',
-		  
+      install_requires=['time','selenium','autoit','PIL','calendar','datetime','glob','os','sys','shutil'
       ],
       zip_safe=False)
