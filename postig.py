@@ -7,7 +7,6 @@ from igsettings import *
 
 #generate 20 randomly picked hashtags from a list in igsettings.py
 hashtags = get_hashtags(20)
-
 #Get the image from command line parameters or most recent in img/ folder
 imagename = get_image()
 

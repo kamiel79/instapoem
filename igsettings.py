@@ -9,6 +9,7 @@ import os.path
 import shutil
 
 WEBDRIVER_PATH = r"C:\DRIVERS\chromedriver.exe"	#Set your webdriver path
+
 ARCHIVE_PATH = "archive/"
 IMAGE_PATH = "img/"
 POEMS_PATH = 'poems/'
@@ -55,10 +56,10 @@ def get_image():
 	imagename = ""
 	if (len(sys.argv) == 2):
 		imagename = sys.argv[1]
-		imagename = ABSOLUTE_PATH + imagename
+		imagename = os.path.abspath(imagename)
 	else:
 		#if not 1 parameter, use most recent file in folder
-		list_of_files = glob.glob(ABSOLUTE_PATH + '\*.png')
+		list_of_files = glob.glob(IMAGE_PATH + "*.png")
 		if (list_of_files):
 			imagename = max(list_of_files, key=os.path.getctime)
 
